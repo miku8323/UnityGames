@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 25e1567a189d36440bb1196aaccdb7d6
+  - enabled: 1
+    path: Assets/Scenes/RhythmGame.unity
+    guid: a2c1608e06061534ebb2a401f61ed2d1
+  - enabled: 1
+    path: Assets/Scenes/Janken.unity
+    guid: 59c1bab9ef824fd428d0934151babdb6
+  - enabled: 1
+    path: Assets/Scenes/BreakOut.unity
+    guid: c8ce019b596493b4985350fe7af94662
   m_configObjects: {}
