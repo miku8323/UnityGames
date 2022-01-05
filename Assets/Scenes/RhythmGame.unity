@@ -1406,6 +1406,7 @@ GameObject:
   - component: {fileID: 1754885033}
   - component: {fileID: 1754885032}
   - component: {fileID: 1754885034}
+  - component: {fileID: 1754885035}
   m_Layer: 0
   m_Name: TimeLine
   m_TagString: Untagged
@@ -1423,7 +1424,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8e1f17608a4b5b247b8bb950cc4ef532, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -1545,6 +1546,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1754885035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754885031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: fc8c99e1a3541bb45831ccdc0f742b1b, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2058623882}
+          m_TargetAssemblyTypeName: RhythmGameManager, Assembly-CSharp
+          m_MethodName: OnEndEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1979744022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75617102033725b4bad1ab5a4d81b26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playableDirector: {fileID: 1754885032}
 --- !u!1 &2091339477
 GameObject:
   m_ObjectHideFlags: 0

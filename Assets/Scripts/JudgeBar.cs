@@ -19,6 +19,18 @@ public class JudgeBar : MonoBehaviour
             RaycastHit hit;
             if(Physics.SphereCast(transform.position + new Vector3(0, -3, 0), 0.5f, transform.up, out hit, 5))
             {
+                float distance;
+                distance = Mathf.Abs(hit.transform.position.z - transform.position.z);
+                if(distance < 0.3f)
+                {
+                    Debug.Log("perfect");
+                }
+                else if (distance < 0.5f)
+                {
+                    Debug.Log("good");
+                } else {
+                    Debug.Log("bad");
+                }
                 Destroy(hit.collider.gameObject);
             }
         }
