@@ -1,5 +1,13 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "Keijiro",
+      "url": "https://registry.npmjs.com",
+      "scopes": [ "jp.keijiro" ]
+    }
+  ],
   "dependencies": {
+    "jp.keijiro.klak.timeline.midi": "1.0.5",
     "com.copocopo.textmeshpro.animator": "https://github.com/coposuke/TextMeshProAnimator.git",
     "com.unity.collab-proxy": "1.15.4",
     "com.unity.ide.rider": "3.0.7",
