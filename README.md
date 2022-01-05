@@ -7,7 +7,7 @@
 
 ## 参考
 ### リズムゲーム
-https://github.com/Studio-Shimazu/SoundGameOchiru
+https://github.com/Studio-Shimazu/SoundGameOchiru  
 https://github.com/keijiro/MidiAnimationTrack
 
 ### TextMeshProのアニメーション
