@@ -23,12 +23,12 @@ public class JudgeBar : MonoBehaviour
             {
                 float distance;
                 distance = Mathf.Abs(hit.transform.position.z - transform.position.z);
-                if(distance < 0.3f)
+                if(distance < 0.5f)
                 {
                     Debug.Log("perfect");
                     gameManager.AddScore(100);
                 }
-                else if (distance < 0.5f)
+                else if (distance < 0.8f)
                 {
                     Debug.Log("good");
                     gameManager.AddScore(50);
