@@ -13,13 +13,18 @@ public class BallManager : MonoBehaviour
     void Start()
     {
         myRigid = this.GetComponent<Rigidbody>();
-        myRigid.AddForce((transform.forward + transform.right) * speed, ForceMode.VelocityChange);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        speed += 0.00001f;
+
+        // start
+        if (Input.GetKeyDown(KeyCode.Return))
+        {   
+            myRigid.AddForce((transform.forward + transform.right) * speed, ForceMode.VelocityChange);
+        }
     }
 
     private void OnCollisionEnter(Collision collision) // 衝突したら消す
