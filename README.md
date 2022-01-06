@@ -42,9 +42,11 @@
 ### リズムゲーム
 https://github.com/Studio-Shimazu/SoundGameOchiru  
 https://github.com/keijiro/MidiAnimationTrack
-#### 音素材
-https://github.com/Studio-Shimazu/SoundGameOchiru/releases/tag/1.0
 
 ### TextMeshProのアニメーション
 coposuke/[TextMeshProAnimatior](https://github.com/coposuke/TextMeshProAnimator#--play-by-progress)  
 License: MIT
+
+### 音源・素材
+https://soundeffect-lab.info/sound/animal/  
+https://github.com/Studio-Shimazu/SoundGameOchiru/releases/tag/1.0
