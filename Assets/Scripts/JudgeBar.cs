@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JudgeBar : MonoBehaviour
 {
+    [SerializeField] RhythmGameManager gameManager = default;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +26,15 @@ public class JudgeBar : MonoBehaviour
                 if(distance < 0.3f)
                 {
                     Debug.Log("perfect");
+                    gameManager.AddScore(100);
                 }
                 else if (distance < 0.5f)
                 {
                     Debug.Log("good");
+                    gameManager.AddScore(50);
                 } else {
                     Debug.Log("bad");
+                    gameManager.AddScore(10);
                 }
                 Destroy(hit.collider.gameObject);
             }
