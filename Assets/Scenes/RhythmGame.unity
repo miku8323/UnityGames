@@ -1113,7 +1113,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.176
+  m_Volume: 1
   m_Pitch: 2
   Loop: 0
   Mute: 0
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e709c14f15e9149458355112053cb41a, type: 2}
   m_sharedMaterial: {fileID: 6263054216729152942, guid: e709c14f15e9149458355112053cb41a, type: 2}
@@ -4767,6 +4767,7 @@ MonoBehaviour:
   resultScore: {fileID: 2013833814}
   countDownText: {fileID: 947407258}
   resultPanel: {fileID: 1981681344}
+  startPanel: {fileID: 557705108}
 --- !u!1 &2100922687
 GameObject:
   m_ObjectHideFlags: 0

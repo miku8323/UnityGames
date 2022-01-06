@@ -8,6 +8,7 @@ public class BallManager : MonoBehaviour
     public float speed = 10.0f;
     private Rigidbody myRigid;
     public BreakOutManager myManager;
+    [SerializeField] GameObject startPanel = default;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,12 @@ public class BallManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed += 0.00001f;
+        speed += 0.0001f;
 
         // start
         if (Input.GetKeyDown(KeyCode.Return))
         {   
+            startPanel.SetActive(false);
             myRigid.AddForce((transform.forward + transform.right) * speed, ForceMode.VelocityChange);
         }
     }

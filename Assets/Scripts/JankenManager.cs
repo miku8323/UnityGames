@@ -19,6 +19,8 @@ public class JankenManager : MonoBehaviour
     [SerializeField] GameObject[] stars = default;
     [SerializeField] GameObject startPanel = default;
     [SerializeField] GameObject[] particles = default;
+    [SerializeField] GameObject winPanel = default;
+    [SerializeField] GameObject losePanel = default;
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +100,9 @@ public class JankenManager : MonoBehaviour
         // start
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            startPanel.SetActive(false);
+            losePanel.SetActive(false);
+            winPanel.SetActive(false);
             isGame = true;
             myCount = 0;
             enemyCount = 0;
@@ -113,7 +118,7 @@ public class JankenManager : MonoBehaviour
             myAnimator.SetBool ( "none", false );
         }
         
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             myHand = "チョキ";
             myAnimator.SetBool ( "gu", false );
@@ -122,7 +127,7 @@ public class JankenManager : MonoBehaviour
             myAnimator.SetBool ( "none", false );
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             myHand = "パー";
             myAnimator.SetBool ( "gu", false );
@@ -212,10 +217,13 @@ public class JankenManager : MonoBehaviour
             enemyCount += 1;
         }
 
-        if(myCount > 2 || enemyCount > 2)
+        // 終了判定
+        if(myCount > 2)
         {
-            // 終了判定
-            //isGame = false;
+            winPanel.SetActive(true);
+        } else if(enemyCount > 2)
+        {
+            losePanel.SetActive(true);
         } else {
             // 続行
             Invoke("janken", 1.0f);

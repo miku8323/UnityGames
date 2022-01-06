@@ -12,18 +12,28 @@ public class RhythmGameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI resultScore = default;
     [SerializeField] TextMeshProUGUI countDownText = default;
     [SerializeField] GameObject resultPanel = default;
+    [SerializeField] GameObject startPanel = default;
     int score = 0;
+    private bool isGame = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GameMain());
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(isGame == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                isGame = true;
+                startPanel.SetActive(false);
+                StartCoroutine(GameMain());
+            }
+        }
     }
 
     IEnumerator GameMain()
@@ -46,6 +56,7 @@ public class RhythmGameManager : MonoBehaviour
     {
         resultScore.text = score.ToString();
         resultPanel.SetActive(true);
+        isGame = false;
     }
 
     // スコア
