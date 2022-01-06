@@ -6,25 +6,45 @@ public class GenerateNoteFromSignal : MonoBehaviour
 {
     [SerializeField] noteManager note_prefab;
 
-    // Start is called before the first frame update
-    void Start()
+    // ド
+    public void generateNoteC()
     {
-        
+        Instantiate(note_prefab, new Vector3(-3, 0, 8), Quaternion.identity);
     }
 
-    // Update is called once per frame
-    void Update()
+    // レ
+    public void generateNoteD()
     {
-        
+        Instantiate(note_prefab, new Vector3(-2, 0, 8), Quaternion.identity);
     }
 
-    public void NoteEvent()
+    // ミ
+    public void generateNoteE()
     {
-        generateNote();
+        Instantiate(note_prefab, new Vector3(-1, 0, 8), Quaternion.identity);
     }
 
-    private void generateNote()
+    // ファ
+    public void generateNoteF()
     {
         Instantiate(note_prefab, new Vector3(0, 0, 8), Quaternion.identity);
+    }
+
+    // ソ
+    public void generateNoteG()
+    {
+        Instantiate(note_prefab, new Vector3(1, 0, 8), Quaternion.identity);
+    }
+
+    // ラ
+    public void generateNoteA()
+    {
+        Instantiate(note_prefab, new Vector3(2, 0, 8), Quaternion.identity);
+    }
+
+    // シ
+    public void generateNoteB()
+    {
+        Instantiate(note_prefab, new Vector3(3, 0, 8), Quaternion.identity);
     }
 }
