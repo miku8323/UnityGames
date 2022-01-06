@@ -16,6 +16,10 @@ public class JankenManager : MonoBehaviour
     public Animator myAnimator;
     public Animator enemyAnimator;
 
+    [SerializeField] GameObject[] stars = default;
+    [SerializeField] GameObject startPanel = default;
+    [SerializeField] GameObject[] particles = default;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,68 @@ public class JankenManager : MonoBehaviour
     {
         if(isGame){
             time += Time.deltaTime;
+            // 自分
+            // エフェクト
+            switch(myCount)
+            {
+                case 1:
+                    stars[0].SetActive(false);
+                    stars[1].SetActive(false);
+                    stars[2].SetActive(true);
+                    particles[1].SetActive(false);
+                    break;
+                case 2:
+                    stars[0].SetActive(false);
+                    stars[1].SetActive(true);
+                    stars[2].SetActive(true);
+                    particles[1].SetActive(true);
+                    break;
+                case 3:
+                    stars[0].SetActive(true);
+                    stars[1].SetActive(true);
+                    stars[2].SetActive(true);
+                    particles[1].SetActive(false);
+                    break;
+                default:
+                    stars[0].SetActive(false);
+                    stars[1].SetActive(false);
+                    stars[2].SetActive(false);
+                    break;
+            }
+            // てき
+            switch(enemyCount)
+            {
+                case 1:
+                    stars[3].SetActive(false);
+                    stars[4].SetActive(false);
+                    stars[5].SetActive(true);
+                    particles[0].SetActive(false);
+                    break;
+                case 2:
+                    stars[3].SetActive(false);
+                    stars[4].SetActive(true);
+                    stars[5].SetActive(true);
+                    particles[0].SetActive(true);
+                    break;
+                case 3:
+                    stars[3].SetActive(true);
+                    stars[4].SetActive(true);
+                    stars[5].SetActive(true);
+                    particles[0].SetActive(false);
+                    break;
+                default:
+                    stars[3].SetActive(false);
+                    stars[4].SetActive(false);
+                    stars[5].SetActive(false);
+                    break;
+            }
+        } else {
+            foreach(GameObject star in stars){
+                star.SetActive(false);
+            }
+            foreach(GameObject particle in particles){
+                particle.SetActive(false);
+            }
         }
 
         // start
@@ -65,7 +131,7 @@ public class JankenManager : MonoBehaviour
             myAnimator.SetBool ( "none", false );
         }
 
-        if(time > 1.8f)
+        if(time > 1.8f && isGame == true)
         {
             judge();
         }
@@ -149,6 +215,7 @@ public class JankenManager : MonoBehaviour
         if(myCount > 2 || enemyCount > 2)
         {
             // 終了判定
+            //isGame = false;
         } else {
             // 続行
             Invoke("janken", 1.0f);
