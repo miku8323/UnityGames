@@ -22,7 +22,7 @@
 ### リズムゲーム
 #### ルール
 ボールがバーに落ちてくるタイミングでキーをたたいてください。  
-判定は4段階です。（色未実装）
+判定は4段階です（色未実装）。
  - Parfect : 赤（100点）
  - Good : オレンジ（50点）
  - Bad : 青（10点）
@@ -52,3 +52,4 @@ https://soundeffect-lab.info/sound/animal/
 https://github.com/Studio-Shimazu/SoundGameOchiru/releases/tag/1.0
 https://dova-s.jp/bgm/play15424.html
 https://dova-s.jp/bgm/download15201.html
+https://otologic.jp/free/se/flash01.html
