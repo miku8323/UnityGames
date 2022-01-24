@@ -42,6 +42,7 @@ public class JankenManager : MonoBehaviour
                     stars[1].SetActive(false);
                     stars[2].SetActive(true);
                     particles[1].SetActive(false);
+                    particles[0].SetActive(false);
                     break;
                 case 2:
                     stars[0].SetActive(false);
@@ -69,6 +70,7 @@ public class JankenManager : MonoBehaviour
                     stars[4].SetActive(false);
                     stars[5].SetActive(true);
                     particles[0].SetActive(false);
+                    particles[1].SetActive(false);
                     break;
                 case 2:
                     stars[3].SetActive(false);
@@ -136,7 +138,7 @@ public class JankenManager : MonoBehaviour
             myAnimator.SetBool ( "none", false );
         }
 
-        if(time > 1.8f && isGame == true)
+        if(time > 1.4f && isGame == true)
         {
             judge();
         }
